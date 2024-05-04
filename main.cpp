@@ -4,17 +4,20 @@
 #include "connection.h"
 #include "personnel.h"
 #include "mainwindow.h"
+#include "mainwindow1.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     personnellist w;
     MainWindow m;
+    MainWindow1 n;
     Connection c;
     bool test=c.createconnect();
     if(test)
     {m.show();
         w.show();
+        n.show();
         QMessageBox::information(nullptr, QObject::tr("database is open"),
                     QObject::tr("connection successful.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);

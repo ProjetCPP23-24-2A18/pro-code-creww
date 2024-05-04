@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>recorder</class>
+ <widget class="QDialog" name="recorder">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1392</width>
+    <height>707</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>1510</width>
+     <height>900</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+/* Style for QGroupBox */
+QRadioButton{ color: white; /* Text color for labels */
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the text bold if desired */
+    margin: 5px; /* Adjust margin as needed */
+}
+
+/* Style for QLineEdit (input box) */
+QLineEdit {
+    background-color: #3498db; /* Blue color for input boxes */
+    border: 1px solid #2980b9; /* Border color for input boxes */
+    border-radius: 5px; /* Border radius for input boxes */
+    padding: 5px; /* Padding for input boxes */
+    color: black; /* Text color inside input boxes */
+}
+
+/* Style for QLabel (text label) */
+QLabel {
+    color: white; /* Text color for labels */
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the text bold if desired */
+    margin: 5px; /* Adjust margin as needed */
+}
+
+/* Style for QPushButton */
+QPushButton {
+    background-color: #3498db; /* Blue color for buttons */
+    border: 1px solid #2980b9; /* Border color for buttons */
+    border-radius: 5px; /* Border radius for buttons */
+    padding: 5px 10px; /* Adjust padding as needed */
+    color: white; /* Text color on buttons */
+}
+
+/* Additional styling for better appearance */
+QPushButton:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+QPushButton:pressed {
+    background-color: #21618c; /* Even darker blue when pressed */
+}
+
+/* Add more styles as needed for your specific application */
+</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QPushButton" name="OptionPushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>40</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Options</string>
+    </property>
+   </widget>
+   <widget class="QScrollArea" name="scrollArea_2">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>130</y>
+      <width>1231</width>
+      <height>731</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1229</width>
+       <height>729</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

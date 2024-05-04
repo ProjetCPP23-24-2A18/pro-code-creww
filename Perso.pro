@@ -4,12 +4,13 @@ QT += charts
 QT += network
 QT += multimedia
 QT += serialport
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-
-CONFIG += c++11
 QT       += core gui sql multimedia multimediawidgets printsupport charts network
 QT +=svg
 QT +=serialport
+greaterThan(QT_MAJOR_VERSION, 12): QT += webengine
+
+
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -29,6 +30,7 @@ SOURCES += \
     ImageDelegate.cpp \
     arduino.cpp \
     arduinosk.cpp \
+    audioplayer.cpp \
     chatserver.cpp \
     chatsocket.cpp \
     connection.cpp \
@@ -36,6 +38,7 @@ SOURCES += \
     gestionpatient.cpp \
     main.cpp \
     mainwindow.cpp \
+    mainwindow1.cpp \
     notepad.cpp \
     patient.cpp \
     personnel.cpp \
@@ -44,6 +47,8 @@ SOURCES += \
     qrcodegeneratordemo.cpp \
     qrcodegeneratorworker.cpp \
     rdv.cpp \
+    rdv1.cpp \
+    recorder.cpp \
     sms.cpp \
     smtp.cpp
 
@@ -51,18 +56,22 @@ HEADERS += \
     ImageDelegate.h \
     arduino.h \
     arduinosk.h \
+    audioplayer.h \
     chatserver.h \
     chatsocket.h \
     connection.h \
     dumessengerconnectiondialog.h \
     gestionpatient.h \
     mainwindow.h \
+    mainwindow1.h \
     notepad.h \
     patient.h \
     personnel.h \
     personnellist.h \
     qrcode.h \
     rdv.h \
+    rdv1.h \
+    recorder.h \
     sms.h \
     smtp.h
 
@@ -70,8 +79,10 @@ FORMS += \
     dumessengerconnectiondialog.ui \
     gestionpatient.ui \
     mainwindow.ui \
+    mainwindow1.ui \
     notepad.ui \
-    personnellist.ui
+    personnellist.ui \
+    recorder.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
