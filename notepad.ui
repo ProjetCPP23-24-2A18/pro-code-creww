@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Notepad</class>
+ <widget class="QDialog" name="Notepad">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1228</width>
+    <height>724</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* styles.qss */
+
+* {
+    font-family: &quot;Playfair Display&quot;, serif; /* Fallback to generic serif font if Playfair Display is not available */
+    color: black;
+}
+
+/* Style for QGroupBox */
+QGroupBox {
+    border: 2px solid #e67e22; /* Change to a bright orange color */
+    border-radius: 5px;
+    padding: 10px;
+    color: white; /* Set text color inside group box */
+    background-color: rgba(230, 126, 34, 0.9); /* Slightly transparent orange background */
+}
+
+/* Style for QLineEdit (input box) */
+QLineEdit {
+    background-color: rgba(230, 126, 34, 0.9); /* Slightly transparent orange background */
+    border: 1px solid #d35400; /* Change to a darker orange color */
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
+
+/* Style for QComboBox */
+QComboBox {
+    background-color: rgba(230, 126, 34, 0.9); /* Slightly transparent orange background */
+    border: 1px solid #d35400; /* Change to a darker orange color */
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #ffffff;
+    color: black;
+}
+
+/* Style for QDateEdit */
+QDateEdit {
+    background-color: rgba(230, 126, 34, 0.9); /* Slightly transparent orange background */
+    border: 1px solid #d35400; /* Change to a darker orange color */
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
+
+/* Style for QLabel */
+QLabel {
+    color: #e67e22; /* Change to a bright orange color */
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+/* Style for QPushButton */
+QPushButton {
+    background-color: rgba(230, 126, 34, 0.9); /* Slightly transparent orange background */
+    border: 1px solid #d35400; /* Change to a darker orange color */
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+}
+
+/* Additional styling for better appearance */
+QPushButton:hover {
+    background-color: #d35400; /* Darker orange color on hover */
+}
+
+QPushButton:pressed {
+    background-color: #a04000; /* Even darker orange color on press */
+}
+
+/* Style for QTableView */
+QTableView {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+    border: 5px solid #e67e22; /* Creative thick orange border */
+    border-radius: 15px; /* Rounded corners for a more creative look */
+    selection-background-color: #e67e22; /* Change to a bright orange color */
+}
+
+/* Style for QHeaderView */
+QHeaderView::section {
+    background-color: rgba(230, 126, 34, 0.9); /* Slightly transparent orange background */
+    color: white;
+    padding: 5px;
+    border: 1px solid #d35400; /* Change to a darker orange color */
+    border-radius: 5px;
+}
+
+/* Style for QTableWidgetItem */
+QTableView QTableWidget::item {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+    color: black;
+    padding: 5px;
+}
+
+QTableView QTableWidget::item:selected {
+    background-color: rgba(230, 126, 34, 0.9); /* Slightly transparent orange background */
+    color: white;
+}
+
+QTableView QTableWidget::item:alternate {
+    background-color: #ecf0f1;
+    color: black;
+}
+
+/* Style for QTabWidget */
+QTabWidget {
+    background-color: #ffffff; /* Set background color for the tab widget */
+}
+
+/* Style for QTabBar */
+QTabBar {
+    background-color: #e67e22; /* Set the background color for the tab bar */
+}
+
+/* Style for selected tab */
+QTabBar::tab:selected {
+    background-color: #d35400; /* Darker orange color for the selected tab */
+    color: white; /* Text color for the selected tab */
+    border: 2px solid #a04000; /* Border style for the selected tab */
+    border-bottom: none; /* Remove bottom border to create a top border effect */
+}
+
+/* Style for unselected tabs */
+QTabBar::tab {
+    background-color: #e67e22; /* Default background color for tabs */
+    color: white; /* Default text color for tabs */
+    border: 2px solid #d35400; /* Default border style for tabs */
+    border-bottom: none; /* Remove bottom border to create a top border effect */
+}
+
+/* Style for unselected tabs on hover */
+QTabBar::tab:hover {
+    background-color: #d35400; /* Darker orange color on hover for unselected tabs */
+}
+</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1207</width>
+     <height>84</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Playfair Display</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="title">
+    <string>Les Controles</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QPushButton" name="New">
+      <property name="text">
+       <string>Nouveau</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/new.png</normaloff>:/new.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="Open">
+      <property name="text">
+       <string>Ouvrir</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/open.png</normaloff>:/open.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="Save">
+      <property name="text">
+       <string>Enregistrer</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/save.jpg</normaloff>:/save.jpg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="text">
+       <string>Enregistrer Sous</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/save as.png</normaloff>:/save as.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="Copy">
+      <property name="text">
+       <string>Copier</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/copy.png</normaloff>:/copy.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="Paste">
+      <property name="text">
+       <string>Coller</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/paste.png</normaloff>:/paste.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="Cut">
+      <property name="text">
+       <string>Couper</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/cut.png</normaloff>:/cut.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_10">
+      <property name="text">
+       <string>Annuler</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/undo.png</normaloff>:/undo.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="Redo">
+      <property name="text">
+       <string>Refaire</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/redo.png</normaloff>:/redo.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="text">
+       <string>A Propos</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/about.png</normaloff>:/about.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>90</y>
+     <width>1207</width>
+     <height>621</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Playfair Display</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>-10</y>
+     <width>1231</width>
+     <height>741</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/img/img/1.jpg);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>groupBox</zorder>
+  <zorder>textEdit</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

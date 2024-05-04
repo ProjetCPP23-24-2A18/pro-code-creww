@@ -3,6 +3,7 @@
 #include "connection.h"
 #include "personnel.h"
 #include "ImageDelegate.h"
+#include "mainwindow.h"
 #include "sms.h"
 #include <QDebug>
 #include <QMessageBox>
@@ -41,7 +42,7 @@
 #include <QFileDialog>
 #include <QPixmap>
 #include <QTextEdit>
-
+#include "arduinosk.h"
 
 personnellist::personnellist(QWidget *parent)
     : QMainWindow(parent)
@@ -59,11 +60,11 @@ personnellist::personnellist(QWidget *parent)
             cardLogsModel->setTable("CARD_LOGS");
             cardLogsModel->select();
             ui->tableView_2->setModel(cardLogsModel);
-
-
+            arduino = new Arduinosk(this);
+            arduino->initPort("COM9");
             connect(ui->addMemberButton, &QPushButton::clicked, this, &personnellist::on_addMemberButton_clicked);
             connect(ui->tableView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &personnellist::on_tableView_selectionChanged);
-
+            connect(arduino, &Arduinosk::cardScanned, this, &personnellist::onCardScanned);
 
         connect(ui->confirm, &QPushButton::clicked, this, &personnellist::on_confirm_clicked);
 
@@ -637,5 +638,11 @@ void personnellist::on_tableView_selectionChanged(const QItemSelection &selected
 
 void personnellist::on_pushButton_clicked()
 {
+
+}
+
+void personnellist::on_pushButton_11_clicked()
+{MainWindow w;
+    w.show();
 
 }

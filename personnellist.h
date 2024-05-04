@@ -8,7 +8,7 @@
 #include <sms.h>
 #include <QSerialPort>
 #include <QSerialPortInfo>
-
+#include "arduinosk.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class personnellist; }
 QT_END_NAMESPACE
@@ -94,7 +94,7 @@ private:
     QString imagePath;
     QString memberImagePath;
     bool isCreatingPersonnel;
-
+    Arduinosk *arduino;
     bool checkIfCardExists(const QString& cardID);
     void updateEmployeePhotoPath(int personnelId, const QString &ImagePath);
 };
