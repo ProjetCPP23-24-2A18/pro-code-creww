@@ -35,12 +35,12 @@ SOURCES += \
     chatsocket.cpp \
     connection.cpp \
     dumessengerconnectiondialog.cpp \
-    gestionpatient.cpp \
     main.cpp \
     mainwindow.cpp \
     mainwindow1.cpp \
+    member.cpp \
+    memberlist.cpp \
     notepad.cpp \
-    patient.cpp \
     personnel.cpp \
     personnellist.cpp \
     qrcode.cpp \
@@ -50,7 +50,8 @@ SOURCES += \
     rdv1.cpp \
     recorder.cpp \
     sms.cpp \
-    smtp.cpp
+    smtp.cpp \
+    smtpt.cpp
 
 HEADERS += \
     ImageDelegate.h \
@@ -61,11 +62,11 @@ HEADERS += \
     chatsocket.h \
     connection.h \
     dumessengerconnectiondialog.h \
-    gestionpatient.h \
     mainwindow.h \
     mainwindow1.h \
+    member.h \
+    memberlist.h \
     notepad.h \
-    patient.h \
     personnel.h \
     personnellist.h \
     qrcode.h \
@@ -73,13 +74,14 @@ HEADERS += \
     rdv1.h \
     recorder.h \
     sms.h \
-    smtp.h
+    smtp.h \
+    smtpt.h
 
 FORMS += \
     dumessengerconnectiondialog.ui \
-    gestionpatient.ui \
     mainwindow.ui \
     mainwindow1.ui \
+    memberlist.ui \
     notepad.ui \
     personnellist.ui \
     recorder.ui

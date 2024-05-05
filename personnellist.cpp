@@ -44,6 +44,8 @@
 #include <QTextEdit>
 #include "arduinosk.h"
 
+
+
 personnellist::personnellist(QWidget *parent)
     : QMainWindow(parent)
     , ui (new Ui::personnellist)
