@@ -29,18 +29,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     ImageDelegate.cpp \
     arduino.cpp \
+    arduinoh.cpp \
     arduinosk.cpp \
     audioplayer.cpp \
     chatserver.cpp \
     chatsocket.cpp \
     connection.cpp \
     dumessengerconnectiondialog.cpp \
+    homepage.cpp \
+    login.cpp \
     main.cpp \
     mainwindow.cpp \
     mainwindow1.cpp \
+    mainwindow2.cpp \
     member.cpp \
     memberlist.cpp \
     notepad.cpp \
+    pack.cpp \
     personnel.cpp \
     personnellist.cpp \
     qrcode.cpp \
@@ -56,17 +61,22 @@ SOURCES += \
 HEADERS += \
     ImageDelegate.h \
     arduino.h \
+    arduinoh.h \
     arduinosk.h \
     audioplayer.h \
     chatserver.h \
     chatsocket.h \
     connection.h \
     dumessengerconnectiondialog.h \
+    homepage.h \
+    login.h \
     mainwindow.h \
     mainwindow1.h \
+    mainwindow2.h \
     member.h \
     memberlist.h \
     notepad.h \
+    pack.h \
     personnel.h \
     personnellist.h \
     qrcode.h \
@@ -79,8 +89,11 @@ HEADERS += \
 
 FORMS += \
     dumessengerconnectiondialog.ui \
+    homepage.ui \
+    login.ui \
     mainwindow.ui \
     mainwindow1.ui \
+    mainwindow2.ui \
     memberlist.ui \
     notepad.ui \
     personnellist.ui \
@@ -93,3 +106,11 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     img.qrc
+
+SUBDIRS += \
+    PROJETc.pro
+
+DISTFILES += \
+    PROJETc.pro.user \
+    image.png \
+    image2.png

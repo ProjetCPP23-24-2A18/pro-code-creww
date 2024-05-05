@@ -44,8 +44,6 @@
 #include <QTextEdit>
 #include "arduinosk.h"
 
-
-
 personnellist::personnellist(QWidget *parent)
     : QMainWindow(parent)
     , ui (new Ui::personnellist)
@@ -75,11 +73,7 @@ personnellist::personnellist(QWidget *parent)
     connect(ui->pushButton_14, &QPushButton::clicked, this, &personnellist::on_pushButton_14_clicked);
 
     connect(ui->pushButton_17, &QPushButton::clicked, this, &personnellist::on_pushButton_17_clicked);
-    connect(ui->pushButton_9, &QPushButton::clicked, this, &personnellist::showPage1);
-    connect(ui->pushButton_10, &QPushButton::clicked, this, &personnellist::showPage4);
-    connect(ui->pushButton_11, &QPushButton::clicked, this, &personnellist::showPage2);
-    connect(ui->pushButton_12, &QPushButton::clicked, this, &personnellist::showPage3);
-    connect(ui->pushButton_13, &QPushButton::clicked, this, &personnellist::showPage5);
+
     connect(ui->sms, &QPushButton::clicked, this, &personnellist::showPage6);
     connect(ui->pushButton, &QPushButton::clicked, this, &personnellist::showPage7);
 

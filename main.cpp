@@ -5,25 +5,23 @@
 #include "personnel.h"
 #include "mainwindow.h"
 #include "mainwindow1.h"
-
+#include "mainwindow2.h"
 #include "memberlist.h"
-
+#include "homepage.h"
+#include "login.h"
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);  
-    personnellist w;
-    MainWindow b;
-    MainWindow1 f;
-    memberlist t;
+    QApplication a(argc, argv);
+
     Connection c;
-    bool test= c.createconnect();
+    login l;
+
+    bool test=c.createconnect();
     if(test)
     {
-        w.show();
-         b.show();
-          f.show();
-          t.show();
+
+       l.show();
         QMessageBox::information(nullptr, QObject::tr("database is open"),
                     QObject::tr("connection successful.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
