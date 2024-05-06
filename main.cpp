@@ -15,13 +15,13 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     Connection c;
-    login l;
+    homepage h;
 
     bool test=c.createconnect();
     if(test)
     {
 
-       l.show();
+       h.show();
         QMessageBox::information(nullptr, QObject::tr("database is open"),
                     QObject::tr("connection successful.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);

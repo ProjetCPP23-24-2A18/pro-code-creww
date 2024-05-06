@@ -55,6 +55,8 @@
 #include "chatserver.h"
 #include <QErrorMessage>
 #include "personnellist.h"
+#include "arduino.h"
+
 using qrcodegen::QrCode;
 using qrcodegen::QrSegment;
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow), R(new rdv()) {
